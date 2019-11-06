@@ -1,0 +1,16 @@
+﻿<Window x:Class="MyoMapper.Windows.Introduction.IntroductionWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyoMapper.Windows.Introduction"
+        mc:Ignorable="d"
+        Title="Introduction" Height="450" Width="800" ResizeMode="CanMinimize">
+
+    <Frame Name="currentPage" 
+           Source="HelloPage.xaml" 
+           Visibility="Visible"
+           NavigationUIVisibility="Hidden"
+           />
+
+</Window>

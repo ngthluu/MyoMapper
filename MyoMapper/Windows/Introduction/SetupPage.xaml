@@ -1,0 +1,49 @@
+﻿<Page x:Class="MyoMapper.Windows.Introduction.SetupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyoMapper.Windows.Introduction"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SetupPage">
+
+    <Grid>
+        <Label FontSize="30" Content="Thực hiện thao tác và giữ trong 3 giây" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation BeginTime="0:0:0" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1"></DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+        <Label Name="lblProcessNumber" FontSize="24" Content="1/5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 20, 20" MouseLeftButtonUp="lblProcessNumber_MouseLeftButtonUp">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation BeginTime="0:0:0" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1"></DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+        <Image Name="imgHandPose" HorizontalAlignment="Center" Height="300" Width="300" Margin="0,0,0,-60" VerticalAlignment="Center" Source="/MyoMapper;component/Resources/HandImages/L-1.png"/>
+        <Button Visibility="Hidden" Name="btnFinish" Content="Finish" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 20, 20" Width="80" Height="50" FontSize="18" Background="#FF5B6C89" BorderBrush="{x:Null}" Foreground="White" Click="btnFinish_Click"/>
+    </Grid>
+</Page>
